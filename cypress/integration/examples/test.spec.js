@@ -43,6 +43,12 @@ describe('My Favorites Tab', () => {
             cy.get('input[name="preferredName"]').type(this.data.PreferredName)
             cy.get('input[name="firstName"]').type(this.data.firstname)
             cy.get('input[name="lastName"]').type(this.data.LastName)
+
+            cy.get('input[name="dateOfBirthFormatted"]').type('18/05/1990')
+            cy.wait(5000)
+            cy.get('input[name="preferredName"]').click()
+            cy.get('[class="ember-power-select-placeholder"]').eq(1).click().type('{downarrow}')
+            cy.wait(50000)
             cy.get('label > span > i').click()
             cy.get('div.col-sm-11.col-md-10.col-lg-8.mar-ver > div > div > button:nth-child(2)').click()
             cy.get('div.media-body > p').should('be.visible')      //verify submission message
