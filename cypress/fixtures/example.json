@@ -2,6 +2,9 @@
   "PreferredName": "Employee Test",
   "firstname": "Employee",
   "LastName": "1",
-  "DateofBirth": "18/05/1990"
+  "DateofBirth": "18/05/1990",
+  "mobileNumber": "+91-0000000001", 
+  "position": "Software QA Engineer",
+  "searchname": "Employee Test 1"
   
 }
